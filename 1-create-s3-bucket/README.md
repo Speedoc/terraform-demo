@@ -1,8 +1,13 @@
-1. Run the folllowing command to deploy s3 bucket
+1. Start localstack by running the following command
 
 ```
-terraform init
+localstack start -d
 ```
+Run the following to check status
+```
+localstack status
+```
+2. To formmat and validate terraform code, run the following.
 
 ```
 terraform fmt
@@ -10,6 +15,12 @@ terraform fmt
 
 ```
 terraform validate
+```
+
+3. Run the folllowing command to deploy s3 bucket
+
+```
+terraform init
 ```
 
 ```
@@ -20,13 +31,13 @@ terraform plan
 terraform apply
 ```
 
-2. Check if s3 bucket existed in localstack
+4. Check if s3 bucket existed in localstack
 
 ```
 awslocal s3 ls
 ```
 
-3. Check terraform state
+5. Check terraform state
 
 ```
 terraform state list
